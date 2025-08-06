@@ -137,10 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const projects = [
         {
             id: 1,
-            title: 'Nairobi Southern Bypass',
-            category: 'roads',
-            location: 'Nairobi, Kenya',
-            image: 'images/project-road.jpg'
+            title: 'Kirinyaga University Tuition Block',
+            category: 'buildings',
+            location: 'Kirinyaga, Kenya',
+            image: 'images/csr-image.jpg'
         },
         {
             id: 2,
