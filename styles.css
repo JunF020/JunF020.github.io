@@ -165,7 +165,7 @@ ul {
     margin-left: auto; /* Moves logo to the far right */
     align-items: center;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 2.0rem;
     color: var(--secondary-color);
     order: 2; /* Ensures logo stays on the far right */
 }
