@@ -1,0 +1,1426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Corban Construction Ltd - Leading civil engineering and construction firm in East Africa since 2005. Specializing in buildings, roads, and pavements."
+    />
+    <meta
+      name="keywords"
+      content="construction, civil engineering, East Africa, Kenya, buildings, roads, pavements, infrastructure"
+    />
+    <meta name="author" content="Corban Construction Ltd" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Corban Construction Ltd | Building Africa's Infrastructure"
+    />
+    <meta
+      property="og:description"
+      content="Leading civil engineering and construction firm in East Africa since 2005"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.corbanconstruction.com" />
+    <meta
+      property="og:image"
+      content="https://www.corbanconstruction.com/images/og-image.jpg"
+    />
+    <meta property="og:site_name" content="Corban Construction Ltd" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Corban Construction Ltd | Building Africa's Infrastructure"
+    />
+    <meta
+      name="twitter:description"
+      content="Leading civil engineering and construction firm in East Africa since 2005"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.corbanconstruction.com/images/og-image.jpg"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.corbanconstruction.com" />
+
+    <title>CORBAN CONSTRUCTION LTD | Building Africa's Infrastructure</title>
+
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Lightbox2 CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- for sending emails -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <!-- Critical CSS Inline -->
+    <style>
+      /* Critical CSS for Above-the-Fold Content */
+      :root {
+        --primary-color: #e67e22;
+        --primary-dark: #d35400;
+        --secondary-color: #2c3e50;
+        --accent-color: #16a085;
+        --light-color: #f8f9fa;
+        --dark-color: #2c3e50;
+        --text-color: #333333;
+        --white: #ffffff;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--white);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      /* Header */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: var(--transition);
+      }
+      .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+        text-decoration: none;
+        order: 1;
+      }
+      .logo img {
+        height: 50px;
+        margin-right: 0.75rem;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        order: 2;
+      }
+      .nav-list {
+        display: flex;
+        list-style: none;
+      }
+      .nav-list li {
+        margin-left: 2rem;
+      }
+      .nav-list a {
+        color: var(--dark-color);
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: var(--transition);
+      }
+      .nav-list a:hover,
+      .nav-list a.active {
+        color: var(--primary-color);
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 600px;
+        overflow: hidden;
+        margin-top: 80px;
+      }
+      .hero-slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+      .slide.active {
+        opacity: 1;
+      }
+      .slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.6)
+        );
+      }
+      .slide-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--white);
+        width: 90%;
+        max-width: 800px;
+        z-index: 10;
+        padding: 0 1rem;
+      }
+      .slide-title {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeInUp 1s ease;
+      }
+      .slide-text {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        animation: fadeInUp 1s ease 0.3s forwards;
+        opacity: 0;
+      }
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: var(--white);
+        box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+      }
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Mobile Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+      }
+      .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--dark-color);
+        transition: var(--transition);
+        border-radius: 3px;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+        .nav-list {
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 80px);
+          background-color: var(--white);
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          padding-top: 2rem;
+          transition: var(--transition);
+        }
+        .nav-list.active {
+          left: 0;
+        }
+        .nav-list li {
+          margin: 1rem 0;
+        }
+        .slide-title {
+          font-size: 2rem;
+        }
+        .slide-text {
+          font-size: 1rem;
+        }
+      }
+    </style>
+
+    <!-- Main CSS -->
+    <link
+      rel="stylesheet"
+      href="styles.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Corban Construction Ltd",
+        "url": "https://www.corbanconstruction.com",
+        "logo": "https://www.corbanconstruction.com/images/logo.png",
+        "description": "Leading civil engineering and construction firm in East Africa since 2005",
+        "foundingDate": "2005",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Milestone Building, 4th Floor, Along Northern Bypass",
+          "addressLocality": "Nairobi",
+          "postalCode": "00100",
+          "addressCountry": "KE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+254-700-123-456",
+          "contactType": "customer service"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/corban-construction",
+          "https://twitter.com/corbanconstruction",
+          "https://www.facebook.com/corbanconstruction"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Cookie Consent Banner -->
+    <div
+      id="cookieConsent"
+      class="cookie-consent"
+      role="dialog"
+      aria-label="Cookie Consent"
+    >
+      <div class="cookie-content">
+        <p>
+          We use cookies to enhance your experience. By continuing to visit this
+          site you agree to our use of cookies.
+        </p>
+        <div class="cookie-buttons">
+          <button
+            id="acceptCookies"
+            class="btn btn-primary"
+            aria-label="Accept cookies"
+          >
+            Accept
+          </button>
+          <button
+            id="declineCookies"
+            class="btn btn-secondary"
+            aria-label="Decline cookies"
+          >
+            Decline
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header/Navigation -->
+    <header class="header" role="banner">
+      <div class="container">
+        <a href="index.html" class="logo" aria-label="Corban Construction Home">
+          <img
+            src="images/logo.png"
+            alt="Corban Construction Logo"
+            width="50"
+            height="50"
+          />
+          <span>CORBAN</span>
+        </a>
+        <nav class="nav" role="navigation" aria-label="Main Navigation">
+          <ul class="nav-list" id="navList">
+            <li><a href="#home" class="active" aria-current="page">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navList"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section id="home" class="hero" role="region" aria-label="Hero Section">
+        <div class="hero-slider" id="heroSlider">
+          <div
+            class="slide active"
+            style="
+              background-image: url(&quot;images/incomplete_kyu_kilele_tuition_block.jpeg&quot;);
+            "
+            role="img"
+            aria-label="Construction site with cranes"
+          >
+            <div class="slide-content">
+              <h1 class="slide-title">Building Africa's Future</h1>
+              <p class="slide-text">
+                Leading infrastructure development across East Africa with
+                excellence and innovation
+              </p>
+              <a
+                href="#contact"
+                class="btn btn-primary"
+                aria-label="Start your project with us"
+                >Start Your Project</a
+              >
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background-image: url(&quot;images/kyu_kilele_tuition_block.jpeg&quot;);
+            "
+            role="img"
+            aria-label="Modern building completed"
+          >
+            <div class="slide-content">
+              <h1 class="slide-title">Quality Construction</h1>
+              <p class="slide-text">
+                Delivering landmark buildings and infrastructure that stand the
+                test of time
+              </p>
+              <a
+                href="#projects"
+                class="btn btn-primary"
+                aria-label="View our projects"
+                >View Projects</a
+              >
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url(&quot;images/pavements.jpeg&quot;)"
+            role="img"
+            aria-label="Road construction"
+          >
+            <div class="slide-content">
+              <h1 class="slide-title">Modern Infrastructure</h1>
+              <p class="slide-text">
+                Building roads and pavements that connect communities and drive
+                economic growth
+              </p>
+              <a
+                href="#services"
+                class="btn btn-primary"
+                aria-label="Explore our services"
+                >Our Services</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls" role="group" aria-label="Slider controls">
+          <button class="prev-slide" id="prevSlide" aria-label="Previous slide">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div
+            class="slide-indicators"
+            id="slideIndicators"
+            role="tablist"
+            aria-label="Slide indicators"
+          ></div>
+          <button class="next-slide" id="nextSlide" aria-label="Next slide">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+          <div class="mouse"></div>
+        </div>
+      </section>
+
+      <!-- Intro Section -->
+      <section class="intro-section" aria-labelledby="intro-heading">
+        <div class="container">
+          <div class="intro-content">
+            <h2 id="intro-heading" class="section-title">
+              CORBAN CONSTRUCTION LTD
+            </h2>
+            <p class="section-subtitle">
+              Leading Civil Engineering & Construction Firm in East Africa
+            </p>
+            <p class="intro-text">
+              Since 2005, Corban Construction has been at the forefront of
+              infrastructure development across East Africa, delivering
+              high-quality construction projects that transform communities and
+              drive economic growth.
+            </p>
+            <div class="stats-grid" id="statsGrid">
+              <div class="stat-item">
+                <div
+                  class="stat-number"
+                  data-count="150"
+                  aria-label="150 projects completed"
+                >
+                  0
+                </div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div
+                  class="stat-number"
+                  data-count="18"
+                  aria-label="18 years experience"
+                >
+                  0
+                </div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div
+                  class="stat-number"
+                  data-count="500"
+                  aria-label="500 employees"
+                >
+                  0
+                </div>
+                <div class="stat-label">Employees</div>
+              </div>
+              <div class="stat-item">
+                <div
+                  class="stat-number"
+                  data-count="7"
+                  aria-label="7 countries"
+                >
+                  0
+                </div>
+                <div class="stat-label">Countries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="about-section" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="about-heading" class="section-title">About Us</h2>
+            <p class="section-subtitle">Our Story, Vision & Values</p>
+          </div>
+          <div class="about-grid">
+            <article class="about-card">
+              <div class="about-icon" aria-hidden="true">
+                <i class="fas fa-history"></i>
+              </div>
+              <h3>Our History</h3>
+              <p>
+                Founded in 2005 in Nairobi, Kenya, Corban Construction began as
+                a small road construction firm and has grown into a regional
+                leader in civil engineering projects.
+              </p>
+            </article>
+            <article class="about-card">
+              <div class="about-icon" aria-hidden="true">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Our Vision</h3>
+              <p>
+                To be East Africa's premier infrastructure development partner,
+                delivering innovative and sustainable solutions that connect
+                communities and drive progress.
+              </p>
+            </article>
+            <article class="about-card">
+              <div class="about-icon" aria-hidden="true">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3>Our Mission</h3>
+              <p>
+                To deliver exceptional construction services through technical
+                excellence, quality workmanship, and commitment to client
+                satisfaction while fostering local talent.
+              </p>
+            </article>
+            <article class="about-card">
+              <div class="about-icon" aria-hidden="true">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3>Our Values</h3>
+              <p>
+                Integrity, Quality, Innovation, Safety, and Sustainability guide
+                every project we undertake and every relationship we build.
+              </p>
+            </article>
+          </div>
+
+          <div class="timeline-section" aria-labelledby="timeline-heading">
+            <h3 id="timeline-heading" class="timeline-title">Our Journey</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-year">2005</div>
+                <div class="timeline-content">
+                  <h4>Company Founded</h4>
+                  <p>
+                    Established in Nairobi with initial focus on rural road
+                    projects in Kenya.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2010</div>
+                <div class="timeline-content">
+                  <h4>Regional Expansion</h4>
+                  <p>
+                    Successfully completed first international project in
+                    Uganda, marking our regional expansion.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2015</div>
+                <div class="timeline-content">
+                  <h4>Diversification</h4>
+                  <p>
+                    Expanded services to include building construction and
+                    pavement development.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                  <h4>ISO Certification</h4>
+                  <p>
+                    Achieved ISO 9001:2015 certification for quality management
+                    systems.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                  <h4>Major Milestone</h4>
+                  <p>
+                    Completed the landmark Mombasa Southern Bypass project, our
+                    largest to date.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section
+        id="projects"
+        class="projects-section"
+        aria-labelledby="projects-heading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="projects-heading" class="section-title">Our Projects</h2>
+            <p class="section-subtitle">Building East Africa's Future</p>
+          </div>
+
+          <div
+            class="project-filters"
+            role="group"
+            aria-label="Project filters"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All Projects
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="under-construction"
+              aria-pressed="false"
+            >
+              Under Construction
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="completed"
+              aria-pressed="false"
+            >
+              Completed Buildings
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="pavements"
+              aria-pressed="false"
+            >
+              Pavements
+            </button>
+            <button class="filter-btn" data-filter="roads" aria-pressed="false">
+              Roads
+            </button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid" role="list">
+            <!-- Projects will be dynamically inserted here -->
+          </div>
+
+          <div class="text-center">
+            <a
+              href="projects.html"
+              class="btn btn-secondary"
+              aria-label="View all projects"
+              >View All Projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section
+        id="gallery"
+        class="gallery-section"
+        aria-labelledby="gallery-heading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="gallery-heading" class="section-title">Project Gallery</h2>
+            <p class="section-subtitle">Explore Our Work in Detail</p>
+          </div>
+
+          <div
+            class="gallery-filters"
+            role="group"
+            aria-label="Gallery filters"
+          >
+            <button class="gallery-filter active" data-filter="all">All</button>
+            <button class="gallery-filter" data-filter="construction">
+              Construction Progress
+            </button>
+            <button class="gallery-filter" data-filter="completed">
+              Completed Projects
+            </button>
+            <button class="gallery-filter" data-filter="equipment">
+              Equipment
+            </button>
+            <button class="gallery-filter" data-filter="team">Our Team</button>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be dynamically inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section
+        id="services"
+        class="services-section"
+        aria-labelledby="services-heading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="services-heading" class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive Construction Solutions</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>Building Construction</h3>
+              <p>
+                From commercial complexes to residential developments, we
+                deliver high-quality building construction services with modern
+                techniques and materials.
+              </p>
+              <a
+                href="services/building-construction.html"
+                class="service-link"
+                aria-label="Learn more about building construction"
+                >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+              ></a>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <i class="fas fa-road"></i>
+              </div>
+              <h3>Road Construction</h3>
+              <p>
+                We design and construct durable road networks including
+                highways, urban roads, and rural access roads using modern
+                equipment and techniques.
+              </p>
+              <a
+                href="services/road-construction.html"
+                class="service-link"
+                aria-label="Learn more about road construction"
+                >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+              ></a>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <i class="fas fa-th-large"></i>
+              </div>
+              <h3>Pavement & Surfacing</h3>
+              <p>
+                Specialized in asphalt and concrete paving for roads, parking
+                lots, airports, and industrial surfaces with precision and
+                durability.
+              </p>
+              <a
+                href="services/pavement.html"
+                class="service-link"
+                aria-label="Learn more about pavement and surfacing"
+                >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+              ></a>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <i class="fas fa-drafting-compass"></i>
+              </div>
+              <h3>Design-Build Services</h3>
+              <p>
+                Integrated approach combining design and construction expertise
+                for efficient project delivery from concept to completion.
+              </p>
+              <a
+                href="services/design-build.html"
+                class="service-link"
+                aria-label="Learn more about design-build services"
+                >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+              ></a>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <h3>Construction Management</h3>
+              <p>
+                Professional project management services ensuring quality,
+                budget control, and timeline adherence for complex projects.
+              </p>
+              <a
+                href="services/construction-management.html"
+                class="service-link"
+                aria-label="Learn more about construction management"
+                >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+              ></a>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Renovation & Expansion</h3>
+              <p>
+                Expert renovation and expansion services for existing
+                structures, modernizing facilities while maintaining structural
+                integrity.
+              </p>
+              <a
+                href="services/renovation.html"
+                class="service-link"
+                aria-label="Learn more about renovation and expansion"
+                >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+              ></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Careers Section -->
+      <section
+        id="careers"
+        class="careers-section"
+        aria-labelledby="careers-heading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="careers-heading" class="section-title">Careers</h2>
+            <p class="section-subtitle">Build Your Future With Us</p>
+          </div>
+
+          <div class="careers-content">
+            <div class="careers-text">
+              <h3>Join Our Team</h3>
+              <p>
+                At Corban Construction, we believe our people are our greatest
+                asset. We offer exciting career opportunities for professionals
+                at all levels in the construction industry.
+              </p>
+              <p>
+                We provide competitive compensation, continuous learning
+                opportunities, and a supportive work environment that values
+                diversity and innovation.
+              </p>
+
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <i class="fas fa-medal" aria-hidden="true"></i>
+                  <span>Competitive Salaries</span>
+                </div>
+                <div class="benefit-item">
+                  <i class="fas fa-book" aria-hidden="true"></i>
+                  <span>Training Programs</span>
+                </div>
+                <div class="benefit-item">
+                  <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                  <span>Health Benefits</span>
+                </div>
+                <div class="benefit-item">
+                  <i class="fas fa-globe-africa" aria-hidden="true"></i>
+                  <span>Regional Projects</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="job-openings">
+              <h3>Current Openings</h3>
+              <div class="jobs-list" id="jobsList" role="list">
+                <!-- Job listings will be dynamically inserted here -->
+              </div>
+              <a
+                href="careers.html"
+                class="btn btn-secondary"
+                style="margin-top: 1.5rem; width: 100%; text-align: center"
+                >View All Positions</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="contact-section"
+        aria-labelledby="contact-heading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="contact-heading" class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in Touch With Our Team</p>
+          </div>
+
+          <div class="contact-content">
+            <div class="contact-info-wrapper">
+              <div class="contact-info">
+                <h3>Contact Information</h3>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="info-text">
+                    <h4>Headquarters</h4>
+                    <address>
+                      Milestone Building, 4th Floor<br />
+                      Along Northern Bypass<br />
+                      P.O. Box 12345-00100<br />
+                      Nairobi, Kenya
+                    </address>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="info-text">
+                    <h4>Phone</h4>
+                    <p>
+                      <a
+                        href="tel:+254700123456"
+                        aria-label="Call us at +254 700 123 456"
+                        >+254 700 123 456</a
+                      ><br />
+                      <a
+                        href="tel:+254720987654"
+                        aria-label="Call us at +254 720 987 654"
+                        >+254 720 987 654</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="info-text">
+                    <h4>Email</h4>
+                    <p>
+                      <a
+                        href="mailto:info@corbanconstruction.com"
+                        aria-label="Email us at info@corbanconstruction.com"
+                        >info@corbanconstruction.com</a
+                      ><br />
+                      <a
+                        href="mailto:tenders@corbanconstruction.com"
+                        aria-label="Email tenders at tenders@corbanconstruction.com"
+                        >tenders@corbanconstruction.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="info-text">
+                    <h4>Office Hours</h4>
+                    <p>
+                      Monday - Friday: 8:00 AM - 5:00 PM<br />
+                      Saturday: 9:00 AM - 1:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links-wrapper">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                  <a
+                    href="https://linkedin.com/company/corban-construction"
+                    class="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our LinkedIn page"
+                  >
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/corbanconstruction"
+                    class="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Twitter page"
+                  >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="https://facebook.com/corbanconstruction"
+                    class="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page"
+                  >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="https://instagram.com/corbanconstruction"
+                    class="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page"
+                  >
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+              <h3>Send Us a Message</h3>
+              <form id="contactForm" class="contact-form" novalidate>
+                <input
+                  type="text"
+                  name="website"
+                  id="website"
+                  style="display: none"
+                  aria-hidden="true"
+                  tabindex="-1"
+                />
+
+                <div class="form-group">
+                  <label for="name" class="form-label">Your Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    required
+                    aria-required="true"
+                    aria-describedby="name-error"
+                  />
+                  <span
+                    class="error-message"
+                    id="name-error"
+                    role="alert"
+                  ></span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email" class="form-label"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      required
+                      aria-required="true"
+                      aria-describedby="email-error"
+                    />
+                    <span
+                      class="error-message"
+                      id="email-error"
+                      role="alert"
+                    ></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-input"
+                      aria-describedby="phone-error"
+                    />
+                    <span
+                      class="error-message"
+                      id="phone-error"
+                      role="alert"
+                    ></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject *</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                    required
+                    aria-required="true"
+                    aria-describedby="subject-error"
+                  />
+                  <span
+                    class="error-message"
+                    id="subject-error"
+                    role="alert"
+                  ></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Your Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-input form-textarea"
+                    required
+                    aria-required="true"
+                    aria-describedby="message-error"
+                  ></textarea>
+                  <span
+                    class="error-message"
+                    id="message-error"
+                    role="alert"
+                  ></span>
+                </div>
+
+                <div class="form-group form-checkbox">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    required
+                    aria-required="true"
+                  />
+                  <label for="privacy"
+                    >I agree to the
+                    <a href="privacy.html">Privacy Policy</a> and processing of
+                    my personal data *</label
+                  >
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-submit"
+                  id="submitBtn"
+                >
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-loader" aria-hidden="true"></span>
+                </button>
+
+                <div
+                  id="formStatus"
+                  class="form-status"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Google Maps -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9866172871584!2d36.91457777382428!3d-1.1699108355076127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3fe7ca9ef867%3A0x1d6aed98915baa1a!2sMilestone%20Business%20center%2C%20Northern%20Bypass%20Road%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1704067200000!5m2!1sen!2ske"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Corban Construction Office Location"
+              aria-label="Google Maps showing Corban Construction office location"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>CORBAN CONSTRUCTION</h3>
+            <p>
+              Building Africa's infrastructure through innovation, quality, and
+              sustainable practices since 2005.
+            </p>
+            <div class="footer-logo">
+              <img
+                src="images/logo.png"
+                alt="Corban Construction Logo"
+                loading="lazy"
+                width="150"
+                height="50"
+              />
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <nav aria-label="Footer navigation">
+              <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer-col">
+            <h3>Services</h3>
+            <nav aria-label="Services navigation">
+              <ul class="footer-links">
+                <li>
+                  <a href="services/building-construction.html"
+                    >Building Construction</a
+                  >
+                </li>
+                <li>
+                  <a href="services/road-construction.html"
+                    >Road Construction</a
+                  >
+                </li>
+                <li>
+                  <a href="services/pavement.html">Pavement & Surfacing</a>
+                </li>
+                <li><a href="services/design-build.html">Design-Build</a></li>
+                <li>
+                  <a href="services/construction-management.html"
+                    >Construction Management</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>
+              Subscribe to our newsletter for updates on projects and company
+              news.
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                required
+                aria-label="Email for newsletter"
+              />
+              <button type="submit" aria-label="Subscribe to newsletter">
+                Subscribe
+              </button>
+            </form>
+            <div class="download-brochure">
+              <a
+                href="downloads/corban-brochure.pdf"
+                class="btn-download"
+                download
+                aria-label="Download company brochure PDF"
+              >
+                <i class="fas fa-download" aria-hidden="true"></i> Download
+                Company Brochure
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; 2025 CORBAN CONSTRUCTION LTD. All Rights Reserved.
+          </div>
+          <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Lightbox2 JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/sw.js").then(
+            function (registration) {
+              console.log("ServiceWorker registration successful");
+            },
+            function (err) {
+              console.log("ServiceWorker registration failed: ", err);
+            },
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

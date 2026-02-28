@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nairobi Business Complex - Modern commercial building project by Corban Construction Ltd">
+    <title>Nairobi Business Complex | Corban Construction Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 74px;
+        }
+        
+        .project-detail-content {
+            padding: 4rem 0;
+        }
+        
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--light-color);
+            border-radius: var(--border-radius-lg);
+        }
+        
+        .meta-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        
+        .meta-item p {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .breadcrumb {
+            padding: 1rem 0;
+            background: var(--light-color);
+            margin-top: 74px;
+        }
+        
+        .breadcrumb ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/50x50/e67e22/ffffff?text=CC" alt="Corban Construction Logo" width="50" height="50">
+                <span>CORBAN</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li aria-current="page">Nairobi Business Complex</li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-detail-hero">
+        <div class="hero-content">
+            <h1>Nairobi Business Complex</h1>
+            <p>Modern 15-story commercial building</p>
+        </div>
+    </section>
+
+    <main class="project-detail-content">
+        <div class="container">
+            <div class="project-meta">
+                <div class="meta-item">
+                    <h4>Client</h4>
+                    <p>Nairobi Development Authority</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Location</h4>
+                    <p>Nairobi, Kenya</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Status</h4>
+                    <p>Under Construction</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Completion</h4>
+                    <p>December 2025</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Value</h4>
+                    <p>KES 2.5 Billion</p>
+                </div>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>The Nairobi Business Complex is a state-of-the-art commercial development located in the heart of Nairobi's central business district. This 15-story building will feature modern office spaces, retail outlets, and parking facilities for over 500 vehicles.</p>
+            
+            <p>Our team is implementing cutting-edge construction techniques including green building practices, energy-efficient systems, and advanced safety protocols. The project is expected to set new standards for commercial construction in East Africa.</p>
+
+            <h2>Project Gallery</h2>
+            <div class="project-gallery">
+                <a href="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&q=80" data-lightbox="project" data-title="Construction Progress">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Construction Progress" loading="lazy">
+                </a>
+                <a href="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" data-lightbox="project" data-title="Site Overview">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Site Overview" loading="lazy">
+                </a>
+                <a href="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" data-lightbox="project" data-title="Building Design">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Building Design" loading="lazy">
+                </a>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="index.html#projects" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 CORBAN CONSTRUCTION LTD. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>
