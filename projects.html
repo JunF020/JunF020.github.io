@@ -24,10 +24,11 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
+      /* Projects Page Specific Styles */
       .project-detail-hero {
         height: 60vh;
         background:
-          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          linear-gradient(rgba(7, 20, 32, 0.7), rgba(7, 20, 32, 0.7)),
           url("images/ilu_main_complex.jpeg");
         background-size: cover;
         background-position: center;
@@ -37,6 +38,7 @@
         text-align: center;
         color: var(--white);
         margin-top: 74px;
+        position: relative;
       }
 
       .project-detail-content {
@@ -51,6 +53,7 @@
         padding: 2rem;
         background: var(--light-color);
         border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-sm);
       }
 
       .meta-item h4 {
@@ -58,12 +61,15 @@
         margin-bottom: 0.5rem;
         font-size: 0.9rem;
         text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
       }
 
       .meta-item p {
         color: var(--secondary-color);
         font-weight: 600;
         margin: 0;
+        font-size: 1.1rem;
       }
 
       .project-gallery {
@@ -77,22 +83,22 @@
         width: 100%;
         height: 250px;
         object-fit: cover;
-        border-radius: 8px;
+        border-radius: var(--border-radius);
         cursor: pointer;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
       }
 
       .project-gallery img:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--shadow-lg);
       }
 
       .breadcrumb {
         padding: 1rem 0;
         background: var(--light-color);
         margin-top: 74px;
+        border-bottom: 1px solid var(--light-gray);
       }
 
       .breadcrumb ul {
@@ -100,11 +106,13 @@
         list-style: none;
         gap: 0.5rem;
         font-size: 0.9rem;
+        flex-wrap: wrap;
       }
 
       .breadcrumb a {
         color: var(--text-light);
         text-decoration: none;
+        transition: var(--transition);
       }
 
       .breadcrumb a:hover {
@@ -125,19 +133,163 @@
         display: inline-block;
         padding: 0.8rem 1.8rem;
         background: var(--secondary-color);
-        color: white;
+        color: var(--white);
         text-decoration: none;
         border-radius: 50px;
-        transition: all 0.3s ease;
+        transition: var(--transition);
+        font-weight: 600;
       }
 
       .btn-secondary:hover {
         background: var(--primary-color);
         transform: translateX(-5px);
+        box-shadow: var(--shadow-sm);
       }
 
       .btn-secondary i {
         margin-right: 8px;
+      }
+
+      /* Additional project-specific styles */
+      .project-description {
+        margin: 2rem 0;
+      }
+
+      .project-description h2 {
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      .project-description p {
+        color: var(--text-color);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .project-info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .info-card {
+        padding: 1.5rem;
+        background: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .info-card i {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .info-card h3 {
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .info-card p {
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+      /* Lightbox styles for gallery */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(7, 20, 32, 0.95);
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .lightbox.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-xl);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .project-detail-hero {
+          height: 40vh;
+          margin-top: 60px;
+        }
+
+        .project-detail-hero h1 {
+          font-size: 1.8rem;
+        }
+
+        .project-meta {
+          gap: 1rem;
+          padding: 1.5rem;
+        }
+
+        .meta-item p {
+          font-size: 0.9rem;
+        }
+
+        .project-gallery {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 1rem;
+        }
+
+        .project-gallery img {
+          height: 200px;
+        }
+
+        .project-description h2 {
+          font-size: 1.4rem;
+        }
+
+        .info-card {
+          padding: 1rem;
+        }
+
+        .breadcrumb {
+          margin-top: 60px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .project-detail-hero {
+          height: 35vh;
+        }
+
+        .project-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .project-gallery img {
+          height: 220px;
+        }
+
+        .project-meta {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
       }
     </style>
   </head>
@@ -241,7 +393,8 @@
       <div class="container">
         <div class="footer-bottom">
           <div class="copyright">
-            &copy; 2026 CORBAN CONSTRUCTION LTD. All Rights Reserved.
+            &copy; <span id="currYear">2026 </span>CORBAN CONSTRUCTION LTD. All
+            Rights Reserved.
           </div>
         </div>
       </div>
@@ -585,6 +738,9 @@
       document.addEventListener("DOMContentLoaded", function () {
         populateProjectGallery();
       });
+
+      document.getElementById("currYear").textContent =
+        new Date().getFullYear();
     </script>
   </body>
 </html>

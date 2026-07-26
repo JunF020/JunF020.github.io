@@ -10,6 +10,7 @@
  * To bust ALL caches on a new deployment, bump CACHE_VERSION below.
  */
 
+// ⚠️  BUMP THIS on every deployment or CSS/JS changes won't reflect for visitors
 const CACHE_VERSION = "v2";
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const IMAGE_CACHE = `images-${CACHE_VERSION}`;
@@ -59,6 +60,7 @@ self.addEventListener("activate", (event) => {
 ====================== */
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  if (!event.request.url.startsWith("http")) return;
 
   const url = new URL(event.request.url);
 
@@ -146,6 +148,7 @@ async function cacheFirst(request, cacheName) {
     return new Response("Network error", { status: 408 });
   }
 }
+("");
 
 /* ======================
    BACKGROUND SYNC

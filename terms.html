@@ -20,30 +20,71 @@
     />
     <link rel="icon" type="image/x-icon" href="images/logo.ico" />
     <style>
+      /* CSS Variables - Matching Main Homepage */
       :root {
-        --primary-color: #e67e22;
-        --primary-dark: #d35400;
-        --secondary-color: #2c3e50;
-        --light-color: #f8f9fa;
-        --text-color: #333333;
+        /* Primary — rich ocean blue */
+        --primary-color: #1a6eb5;
+        --primary-dark: #0f4f8a;
+        --primary-light: #2e8fd4;
+
+        /* Secondary — deep navy */
+        --secondary-color: #0d2137;
+        --secondary-dark: #071420;
+
+        /* Accent — turquoise / teal */
+        --accent-color: #0ea5a0;
+        --accent-light: #14c4be;
+
+        /* Backgrounds & neutrals */
+        --light-color: #f0f7ff;
+        --light-gray: #ddeef9;
+        --dark-color: #0d2137;
+
+        /* Text */
+        --text-color: #1a2e40;
+        --text-light: #5a7a94;
+
+        /* Absolute */
         --white: #ffffff;
-        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --black: #000000;
+
+        /* Status */
+        --error-color: #e74c3c;
+        --success-color: #27ae60;
+        --warning-color: #f0a500;
+
+        /* Shadows — now tinted blue */
+        --shadow-sm: 0 2px 5px rgba(10, 60, 110, 0.1);
+        --shadow: 0 5px 15px rgba(10, 60, 110, 0.12);
+        --shadow-lg: 0 10px 30px rgba(10, 60, 110, 0.18);
+        --shadow-xl: 0 20px 50px rgba(10, 60, 110, 0.22);
+
+        /* Everything else unchanged */
         --transition: all 0.3s ease;
+        --transition-slow: all 0.5s ease;
+        --border-radius: 8px;
+        --border-radius-lg: 12px;
+        --border-radius-xl: 20px;
+        --max-width: 1200px;
       }
+
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
+
       html {
         scroll-behavior: smooth;
       }
+
       body {
         font-family: "Open Sans", sans-serif;
         line-height: 1.8;
         color: var(--text-color);
         background-color: var(--white);
       }
+
       h1,
       h2,
       h3 {
@@ -51,6 +92,7 @@
         font-weight: 700;
       }
 
+      /* Header */
       .header {
         background-color: var(--white);
         box-shadow: var(--shadow);
@@ -59,14 +101,16 @@
         top: 0;
         z-index: 100;
       }
+
       .header .container {
-        max-width: 1200px;
+        max-width: var(--max-width);
         margin: 0 auto;
         padding: 0 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+
       .logo {
         display: flex;
         align-items: center;
@@ -76,10 +120,12 @@
         font-weight: 800;
         font-size: 1.2rem;
       }
+
       .logo img {
         height: 45px;
         margin-right: 0.75rem;
       }
+
       .back-home {
         display: inline-flex;
         align-items: center;
@@ -94,57 +140,69 @@
         font-size: 0.85rem;
         transition: var(--transition);
       }
+
       .back-home:hover {
         background-color: var(--primary-dark);
         transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
       }
 
+      /* Page Hero */
       .page-hero {
         background: linear-gradient(
           135deg,
           var(--secondary-color) 0%,
-          #1a252f 100%
+          var(--secondary-dark) 100%
         );
         color: var(--white);
         padding: 4rem 0;
         text-align: center;
       }
+
       .page-hero h1 {
         font-size: 2.5rem;
         margin-bottom: 0.75rem;
         letter-spacing: 1px;
       }
+
       .page-hero p {
         font-size: 1rem;
         opacity: 0.8;
       }
+
       .page-hero .accent {
-        color: var(--primary-color);
+        color: var(--accent-color);
       }
 
+      /* Container */
       .container {
-        max-width: 1200px;
+        max-width: var(--max-width);
         margin: 0 auto;
         padding: 0 1.5rem;
       }
+
       .content-wrapper {
         max-width: 860px;
         margin: 3rem auto;
         padding: 0 1.5rem 4rem;
       }
+
       .last-updated {
         display: inline-block;
         background-color: var(--light-color);
         border-left: 4px solid var(--primary-color);
         padding: 0.6rem 1rem;
         font-size: 0.85rem;
-        color: #666;
+        color: var(--text-light);
         margin-bottom: 2.5rem;
-        border-radius: 0 4px 4px 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
       }
+
+      /* Policy Sections */
       .policy-section {
         margin-bottom: 2.5rem;
       }
+
       .policy-section h2 {
         font-size: 1.3rem;
         color: var(--secondary-color);
@@ -155,24 +213,30 @@
         align-items: center;
         gap: 0.6rem;
       }
+
       .policy-section h2 i {
         color: var(--primary-color);
         font-size: 1rem;
       }
+
       .policy-section p {
         margin-bottom: 0.9rem;
-        color: #555;
+        color: var(--text-color);
+        line-height: 1.8;
       }
+
       .policy-section ul {
         list-style: none;
         padding: 0;
         margin: 0.75rem 0;
       }
+
       .policy-section ul li {
         padding: 0.4rem 0 0.4rem 1.5rem;
         position: relative;
-        color: #555;
+        color: var(--text-color);
       }
+
       .policy-section ul li::before {
         content: "\f058";
         font-family: "Font Awesome 6 Free";
@@ -183,31 +247,46 @@
         font-size: 0.8rem;
         top: 0.55rem;
       }
+
+      /* Contact Box */
       .contact-box {
-        background: linear-gradient(135deg, var(--secondary-color), #1a252f);
+        background: linear-gradient(
+          135deg,
+          var(--secondary-color),
+          var(--secondary-dark)
+        );
         color: var(--white);
-        border-radius: 12px;
+        border-radius: var(--border-radius-lg);
         padding: 2rem;
         margin-top: 3rem;
         text-align: center;
+        box-shadow: var(--shadow);
       }
+
       .contact-box h3 {
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
       }
+
       .contact-box p {
         opacity: 0.85;
         margin-bottom: 1rem;
         font-size: 0.95rem;
       }
+
       .contact-box a {
-        color: var(--primary-color);
+        color: var(--accent-light);
         font-weight: 600;
         text-decoration: none;
+        transition: var(--transition);
       }
+
       .contact-box a:hover {
         text-decoration: underline;
+        color: var(--white);
       }
+
+      /* Footer */
       .footer {
         background-color: var(--secondary-color);
         color: rgba(255, 255, 255, 0.7);
@@ -215,13 +294,139 @@
         padding: 1.5rem;
         font-size: 0.85rem;
       }
+
       .footer a {
-        color: var(--primary-color);
+        color: var(--primary-light);
         text-decoration: none;
         margin: 0 0.5rem;
+        transition: var(--transition);
       }
+
       .footer a:hover {
         text-decoration: underline;
+        color: var(--white);
+      }
+
+      /* Additional Terms-specific Styles */
+      .terms-highlight {
+        background-color: var(--light-color);
+        border-left: 4px solid var(--primary-color);
+        padding: 1rem 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: var(--border-radius);
+      }
+
+      .terms-highlight p {
+        margin-bottom: 0;
+        color: var(--text-color);
+      }
+
+      .terms-highlight i {
+        color: var(--primary-color);
+        margin-right: 0.5rem;
+      }
+
+      .disclaimer-box {
+        background-color: #fff5e6;
+        border-left: 4px solid var(--warning-color);
+        padding: 1rem 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: var(--border-radius);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .page-hero {
+          padding: 3rem 0;
+        }
+
+        .page-hero h1 {
+          font-size: 2rem;
+        }
+
+        .page-hero p {
+          font-size: 0.9rem;
+        }
+
+        .content-wrapper {
+          margin: 2rem auto;
+          padding: 0 1rem 3rem;
+        }
+
+        .policy-section h2 {
+          font-size: 1.1rem;
+        }
+
+        .policy-section p,
+        .policy-section ul li {
+          font-size: 0.95rem;
+        }
+
+        .contact-box {
+          padding: 1.5rem;
+          margin-top: 2rem;
+        }
+
+        .contact-box h3 {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-hero h1 {
+          font-size: 1.5rem;
+        }
+
+        .last-updated {
+          font-size: 0.75rem;
+          padding: 0.5rem 0.75rem;
+        }
+
+        .policy-section h2 {
+          font-size: 1rem;
+        }
+
+        .policy-section h2 i {
+          font-size: 0.9rem;
+        }
+
+        .contact-box {
+          padding: 1.25rem;
+        }
+
+        .contact-box p {
+          font-size: 0.85rem;
+        }
+      }
+
+      /* Print Styles for Terms Page */
+      @media print {
+        .header,
+        .back-home,
+        .footer,
+        .contact-box {
+          display: none;
+        }
+
+        body {
+          color: black;
+          background: white;
+        }
+
+        .content-wrapper {
+          margin: 0;
+          padding: 0;
+        }
+
+        .policy-section h2 {
+          color: black;
+          border-bottom: 1px solid #ccc;
+        }
+
+        .last-updated {
+          border-left: 4px solid #ccc;
+          color: #666;
+        }
       }
     </style>
   </head>
@@ -387,11 +592,16 @@
 
     <footer class="footer">
       <p>
-        &copy; 2026 Corban Construction Ltd. All Rights Reserved. &nbsp;|&nbsp;
+        &copy; <span id="currYear">2026</span> Corban Construction Ltd. All
+        Rights Reserved. &nbsp;|&nbsp;
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="sitemap.html">Sitemap</a>
       </p>
     </footer>
+    <script>
+      document.getElementById("currYear").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>

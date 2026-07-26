@@ -470,6 +470,8 @@ const EnhancedCarousel = {
 
       this.modal.classList.add("open");
       document.body.style.overflow = "hidden"; // prevent background scroll
+
+      this.closeBtn.focus();
     },
 
     close: function () {
@@ -534,25 +536,39 @@ const EnhancedCarousel = {
               title: img.alt,
             });
           });
+          // New keyboard handler
+          item.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault(); // stops Space from scrolling the page
+              ImageModal.open({
+                src: img.src,
+                title: img.alt,
+              });
+            }
+          });
         });
       }
     }
 
     createGalleryItem(image) {
       return `
-        <div class="gallery-item" data-category="${image.category}">
-          <img 
-            src="${image.src}" 
-            alt="${image.title}"
-            loading="lazy"
-          >
-          <div class="gallery-item-info">
-            <h3>${image.title}</h3>
-            <p>${image.description || ""}</p>
-            <span class="gallery-item-category">${image.category}</span>
-          </div>
-        </div>
-      `;
+    <div class="gallery-item" 
+         data-category="${image.category}"
+         tabindex="0"
+         role="button"
+         aria-label="View ${image.title}">
+      <img 
+        src="${image.src}" 
+        alt="${image.title}"
+        loading="lazy"
+      >
+      <div class="gallery-item-info">
+        <h3>${image.title}</h3>
+        <p>${image.description || ""}</p>
+        <span class="gallery-item-category">${image.category}</span>
+      </div>
+    </div>
+  `;
     }
 
     initCarousels() {
@@ -1537,22 +1553,48 @@ const EnhancedCarousel = {
   // ============================================
   // NEWSLETTER FORM
   // ============================================
-
   const NewsletterForm = {
     init: function () {
       this.form = document.getElementById("newsletterForm");
       if (!this.form) return;
 
+      // Create a status message element and insert it after the form
+      this.status = document.createElement("p");
+      this.status.style.cssText = `
+      margin-top: 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      min-height: 1.2em;
+    `;
+      this.form.insertAdjacentElement("afterend", this.status);
+
       this.form.addEventListener("submit", (e) => {
         e.preventDefault();
-        const email = this.form.querySelector('input[type="email"]').value;
+        const emailInput = this.form.querySelector('input[type="email"]');
+        const email = emailInput.value;
+
         if (email && utils.validateEmail(email)) {
-          alert("Thank you for subscribing to our newsletter!");
+          this.showStatus("Thank you for subscribing!", "success");
           this.form.reset();
         } else {
-          alert("Please enter a valid email address.");
+          this.showStatus("Please enter a valid email address.", "error");
+          emailInput.focus();
         }
       });
+    },
+
+    showStatus: function (message, type) {
+      this.status.textContent = message;
+      this.status.style.color =
+        type === "success"
+          ? "var(--accent-light)" // turquoise — visible on your dark footer
+          : "#ff6b6b"; // soft red — visible on dark footer
+
+      // Clear after 4 seconds
+      clearTimeout(this.statusTimer);
+      this.statusTimer = setTimeout(() => {
+        this.status.textContent = "";
+      }, 4000);
     },
   };
 

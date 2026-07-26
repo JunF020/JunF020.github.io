@@ -19,12 +19,52 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
+      /* CSS Variables - Matching Main Homepage */
       :root {
-        --primary-color: #e67e22;
-        --primary-dark: #d35400;
-        --secondary-color: #2c3e50;
-        --light-color: #f8f9fa;
+        /* Primary — rich ocean blue */
+        --primary-color: #1a6eb5;
+        --primary-dark: #0f4f8a;
+        --primary-light: #2e8fd4;
+
+        /* Secondary — deep navy */
+        --secondary-color: #0d2137;
+        --secondary-dark: #071420;
+
+        /* Accent — turquoise / teal */
+        --accent-color: #0ea5a0;
+        --accent-light: #14c4be;
+
+        /* Backgrounds & neutrals */
+        --light-color: #f0f7ff;
+        --light-gray: #ddeef9;
+        --dark-color: #0d2137;
+
+        /* Text */
+        --text-color: #1a2e40;
+        --text-light: #5a7a94;
+
+        /* Absolute */
         --white: #ffffff;
+        --black: #000000;
+
+        /* Status */
+        --error-color: #e74c3c;
+        --success-color: #27ae60;
+        --warning-color: #f0a500;
+
+        /* Shadows — now tinted blue */
+        --shadow-sm: 0 2px 5px rgba(10, 60, 110, 0.1);
+        --shadow: 0 5px 15px rgba(10, 60, 110, 0.12);
+        --shadow-lg: 0 10px 30px rgba(10, 60, 110, 0.18);
+        --shadow-xl: 0 20px 50px rgba(10, 60, 110, 0.22);
+
+        /* Everything else unchanged */
+        --transition: all 0.3s ease;
+        --transition-slow: all 0.5s ease;
+        --border-radius: 8px;
+        --border-radius-lg: 12px;
+        --border-radius-xl: 20px;
+        --max-width: 1200px;
       }
 
       * {
@@ -38,7 +78,7 @@
         background: linear-gradient(
           135deg,
           var(--secondary-color) 0%,
-          #1a252f 100%
+          var(--secondary-dark) 100%
         );
         min-height: 100vh;
         display: flex;
@@ -59,7 +99,11 @@
         font-weight: 800;
         line-height: 1;
         margin-bottom: 1rem;
-        background: linear-gradient(135deg, var(--primary-color), #f39c12);
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -95,14 +139,14 @@
         text-decoration: none;
         border-radius: 50px;
         font-weight: 600;
-        transition: all 0.3s ease;
+        transition: var(--transition);
         margin: 0.5rem;
       }
 
       .btn:hover {
         background: var(--primary-dark);
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+        box-shadow: var(--shadow);
       }
 
       .btn-outline {
@@ -113,6 +157,7 @@
       .btn-outline:hover {
         background: var(--white);
         color: var(--secondary-color);
+        box-shadow: var(--shadow-sm);
       }
 
       .quick-links {
@@ -139,7 +184,7 @@
       .quick-links a {
         color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
-        transition: color 0.3s;
+        transition: var(--transition);
       }
 
       .quick-links a:hover {

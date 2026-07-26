@@ -1,0 +1,60 @@
+Here's your complete todo list:
+🔒 SECURITY
+
+ Set allowed origins in EmailJS dashboard to corbanconstruction.com only
+ Set rate limiting in EmailJS dashboard
+ Add 30-second cooldown on contact form after successful submission
+ Add 3-second time check to catch bot submissions in validateForm()
+ Wrap templateParams values in utils.sanitizeInput() inside handleSubmit
+
+
+🐛 BUG FIXES
+
+ Confirm old alert() in openProjectModal is completely removed -> DONE
+ Replace alert() in NewsletterForm with inline status message -> DONE
+ Fix timeline HTML structure — timeline-section is outside about-section in the DOM -> DONE
+ Create careers.html or change the "View All Positions" button to href="#contact" -> DONE
+
+
+⚙️ SERVICE WORKER
+
+ Add comment above CACHE_VERSION warning to bump it on every deployment -> DONE
+ Confirm the chrome-extension guard line (if (!event.request.url.startsWith("http")) return) is in the fetch handler -> DONE
+
+⚡ PERFORMANCE
+
+ Compress all 60+ images using squoosh.app or tinypng.com — target under 200KB each -> DONE
+ Add width and height attributes (or CSS aspect-ratio) to dynamically injected <img> tags in createGalleryItem() and renderProjects() -> DONE
+
+
+♿ ACCESSIBILITY
+
+ Add tabindex="0" and keydown Enter/Space handlers to GalleryCarousel items inside createGalleryItem() -> DONE
+ Add this.closeBtn.focus() when modal opens to trap keyboard focus inside modal -> DONE
+
+
+🎨 CONTENT & POLISH
+
+ Make footer copyright year dynamic using new Date().getFullYear() -> DONE
+ Update all hardcoded orange hex values (#e67e22, #d35400, #f39c12) in styles.css, privacy.html, terms.html, and sitemap.html to new blue palette variables -> DONE
+ Update real company phone numbers in contact section -> DONE
+ Update real P.O. Box in contact section -> DONE
+ Upload company brochure PDF to downloads/ folder or remove the download button -> DONE
+ Swap EmailJS credentials to company's account and test form end-to-end -> DONE
+ Confirm contact form test email lands in company's inbox -> DONE
+
+
+🚀 PRE-DEPLOYMENT
+
+ Rename any remaining problematic image filenames (apostrophes, spaces)
+ Update sitemap.xml lastmod dates to deployment date
+ Remove README.md from upload
+ Verify sitemap.xml has no dead URLs (project-detail.html was removed)
+ Add ScrollSpy init() call to DOMContentLoaded block
+ Test every section on live server after upload
+ Test contact form from a real mobile device after deployment
+ Submit domain to Google Search Console
+ Set up Google Analytics
+ Install SSL certificate and add .htaccess HTTPS redirect
+ Check site loads correctly both with and without www.
+ Take screen recording of live site as proof of work

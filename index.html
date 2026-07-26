@@ -567,13 +567,14 @@
         </div>
       </section>
 
-<!-- About Us Section -->
+      <!-- About Us Section -->
       <section id="about" class="about-section" aria-labelledby="about-heading">
         <div class="container">
           <div class="section-header">
             <h2 id="about-heading" class="section-title">About Us</h2>
             <p class="section-subtitle">Our Story, Vision & Values</p>
           </div>
+          
           <div class="about-grid">
             <article class="about-card">
               <div class="about-icon" aria-hidden="true">
@@ -588,6 +589,7 @@
                 construction, civil works, and Mechanical Installations.
               </p>
             </article>
+            
             <article class="about-card">
               <div class="about-icon" aria-hidden="true">
                 <i class="fas fa-eye"></i>
@@ -599,6 +601,7 @@
                 platform of our business for our clients.
               </p>
             </article>
+            
             <article class="about-card">
               <div class="about-icon" aria-hidden="true">
                 <i class="fas fa-bullseye"></i>
@@ -610,27 +613,22 @@
                 continuous development and benefit to our employees.
               </p>
             </article>
+            
             <article class="about-card">
               <div class="about-icon" aria-hidden="true">
                 <i class="fas fa-gem"></i>
               </div>
               <h3>Our Values</h3>
-              <p>
-                <ol class="about-values">
-                                    
-                    <li>Understanding and satisfying our customer's needs.</li>
-                    <li>Providing equal opportunities for the development of our people.</li>
-                    <li>Promote honesty and integrity amongst the employees.</li>
-                    <li>Promote a healthy and safe working environment.</li>
-
-                </ol>
-              </p>
+              <ol class="about-values">
+                <li>Understanding and satisfying our customer's needs.</li>
+                <li>Providing equal opportunities for the development of our people.</li>
+                <li>Promote honesty and integrity amongst the employees.</li>
+                <li>Promote a healthy and safe working environment.</li>
+              </ol>
             </article>
           </div>
-
-
-
-      </section>
+      
+          <!-- Timeline Section - Now properly inside About section -->
           <div class="timeline-section" aria-labelledby="timeline-heading">
             <h3 id="timeline-heading" class="timeline-title">Our Journey</h3>
             <div class="timeline">
@@ -644,6 +642,7 @@
                   </p>
                 </div>
               </div>
+              
               <div class="timeline-item">
                 <div class="timeline-year">2010</div>
                 <div class="timeline-content">
@@ -654,6 +653,7 @@
                   </p>
                 </div>
               </div>
+              
               <div class="timeline-item">
                 <div class="timeline-year">2015</div>
                 <div class="timeline-content">
@@ -664,16 +664,18 @@
                   </p>
                 </div>
               </div>
+              
               <div class="timeline-item">
                 <div class="timeline-year">2020</div>
                 <div class="timeline-content">
                   <h4>Ongoing Projects</h4>
                   <p>
-                        Kirinyaga University Institution in Progress
-                        Tuition Block Complex (II)
+                    Kirinyaga University Institution in Progress
+                    Tuition Block Complex (II)
                   </p>
                 </div>
               </div>
+              
               <div class="timeline-item">
                 <div class="timeline-year">2025</div>
                 <div class="timeline-content">
@@ -683,7 +685,7 @@
                     KDB Business Complex; <br>
                     PGS Residentials; <br>
                     Elicates Residential Apartments; <br>
-                    KyU Complex (I);<br>
+                    KyU Complex (I);
                   </p>
                 </div>
               </div>
@@ -1063,12 +1065,13 @@
                 <!-- Job listings will be dynamically inserted here -->
               </div>
               <a
-                href="careers.html"
+                href="#contact"
                 class="btn btn-secondary"
                 style="margin-top: 1.5rem; width: 100%; text-align: center"
-                >View All Positions</a
+                >Get in Touch About opportunities</a
               >
             </div>
+
           </div>
         </div>
       </section>
@@ -1204,6 +1207,7 @@
                   style="display: none"
                   aria-hidden="true"
                   tabindex="-1"
+                  autocomplete="off"
                 />
 
                 <div class="form-group">
@@ -1216,6 +1220,7 @@
                     required
                     aria-required="true"
                     aria-describedby="name-error"
+                    autocomplete="name"
                   />
                   <span
                     class="error-message"
@@ -1237,6 +1242,7 @@
                       required
                       aria-required="true"
                       aria-describedby="email-error"
+                      autocomplete="email"
                     />
                     <span
                       class="error-message"
@@ -1253,6 +1259,7 @@
                       name="phone"
                       class="form-input"
                       aria-describedby="phone-error"
+                      autocomplete="tel"
                     />
                     <span
                       class="error-message"
@@ -1272,6 +1279,8 @@
                     required
                     aria-required="true"
                     aria-describedby="subject-error"
+                    autocomplete="off"
+
                   />
                   <span
                     class="error-message"
@@ -1289,6 +1298,7 @@
                     required
                     aria-required="true"
                     aria-describedby="message-error"
+                    autocomplete="off"
                   ></textarea>
                   <span
                     class="error-message"
@@ -1435,7 +1445,7 @@
 
         <div class="footer-bottom">
           <div class="copyright">
-            &copy; 2026 CORBAN CONSTRUCTION LTD. All Rights Reserved.
+                    &copy; <span id="currYear">2026</span> CORBAN CONSTRUCTION LTD. All Rights Reserved.
           </div>
           <div class="footer-legal">
             <a href="privacy.html">Privacy Policy</a>
@@ -1579,7 +1589,7 @@
         ScrollSpy.init();
       });
 
-        
+      document.getElementById("currYear").textContent = new Date().getFullYear();
 
     </script>
 
